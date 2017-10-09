@@ -17,10 +17,6 @@ module.exports = {
       './node_modules/bootstrap/dist/css/bootstrap.css',
       ],
   },
-  output: {
-    path: path.join(basePath, 'dist'),
-    filename: '[chunkhash].[name].js',
-  },
   module: {
     rules: [
       {
@@ -37,7 +33,7 @@ module.exports = {
         ],
       },
        //bootstrap
-       {
+      {
         test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url-loader?limit=10000&mimetype=application/font-woff'
       },
@@ -55,4 +51,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['vendor', 'manifest']
+    }),
+  ]
 };

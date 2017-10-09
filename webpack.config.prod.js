@@ -1,20 +1,14 @@
-const webpack = require('webpack');
-//const merge = require('webpack-merge');
-const base = require('./webpack.config.base');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const helpers = require('../../helpers');
+var path = require('path');
+var commonConfig = require('./webpack.config.base');
+var webpackMerge = require('webpack-merge');
 
-module.exports = merge(base, {
-  devtool: 'cheap-module-source-map',
-  output: {
-    path: helpers.resolveFromRootPath('public'),
-    filename: '[chunkhash].[name].js',
-  },
-  plugins: [
-    new ExtractTextPlugin({
-      filename: '[chunkhash].[name].css',
-      disable: false,
-      allChunks: true,
-    }),
-  ],
-});
+var basePath = __dirname;
+
+module.exports = function(){
+  return  webpackMerge(commonConfig,{
+    output: {
+      path: path.join(basePath, 'dist'),
+      filename: '[chunkhash].[name].js',
+    },
+  });
+}
