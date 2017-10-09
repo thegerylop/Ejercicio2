@@ -8,49 +8,73 @@ Clone or download this project.
 
 From the root folder of the project execute (command prompt) to create package.json:
 
-``
+```
 npm init
-``
+```
 
 Then we create the index.html and index.ts.
 
-**CODE HTML**
+**HTML**
 
-```
-<body>
-    <div class="jumbotron">
-        <h1>Hello Arnau</h1>
-        <script src="bundle.js"></script>
-    </div>
-</body>
-```
-**CODE Typescript**
-```
-console.log("Hello World");
-```
+* Create a simple HTML
+
+**Typescript**
+
+* Create a ```file.js``` to create a bundle.js
+
+* Link bundle.js to HTML
 
 # Package.json
 
-Then we will install the repositories that we need with npm command.
+We will install the repositories that we need with command ```npm install```.
 
 **DEPENDENCIES**
-- bootstrap 
-- react
-- react-dom
+
+bootstrap
+    : Styles library for build resposive interficies 
+
+react
+    : Javascript library to create user interfaces
+
+react-dom
+    : Link React with Browser
 
 **DEPENDENCIES-DEV**
-- webpack 
-- webpack-dev-server
-- typescript
-- awesome-typescript-loader
-- css-loader
-- style-loader
-- url-loader
-- file-loader
-- rimraf
-- webpack-merge
+
+webpack
+    : hpña
+
+webpack-dev-server
+    : jh
+
+typescript
+    : sd
+
+awesome-typescript-loader
+    : sd
+
+css-loader
+    : sd 
+
+style-loader
+    : ds
+
+url-loader
+    : ds
+    
+file-loader
+    : ds
+
+rimraf
+    : ds
+
+webpack-merge
+    : ds
 
 **Scripts**
+
+
+
 
 # tsconfig.json
 
